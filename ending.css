@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: linear-gradient(to right, #383737, #000000);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .message h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .message p {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    margin: 20px;
+  }
+  
+  button {
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #e65c50;
+  }
+  
+  .balloons img {
+    width: 100px; 
+    animation: float 4s ease-in-out infinite;
+    position: absolute;
+  }
+  
+  .balloons img:nth-child(1) {
+    left: 20%;
+    animation-delay: 0s;
+  }
+  
+  .balloons img:nth-child(2) {
+    right: 20%;
+    animation-delay: 1s;
+  }
+  .flower img{
+    width: 50px;
+    animation: float 4s ease-in-out infinite;
+  }
+  .flower img:nth-child(1){
+    animation-delay: 0s;
+  }
+  .flower img:nth-child(2){
+    animation-delay: 1s;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+  }
+  
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+   /* Add fade-out animation */
+   .fade-out {
+    animation: fadeOut 5s forwards;
+  }
+
+  @keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+  
+  @media (max-width: 1100px){
+    .balloons img {
+        width: 75px;
+        animation: float 4s ease-in-out infinite;
+        position: absolute;
+      }
+      .balloons img:nth-child(1) {
+        left: 17%;
+        bottom: 4%;
+        animation-delay: 0s;
+      }
+      
+      .balloons img:nth-child(2) {
+        right: 17%;
+        bottom: 7%;
+        animation-delay: 1s;
+      }
+  }
+
+
+
+  body {
+    margin: 0;
+    background: #020202;
+    cursor: crosshair;
+  }
+  canvas{display:block}
+  h1 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-family: "Source Sans Pro";
+    font-size: 3em;
+    font-weight: 900;
+    -webkit-user-select: none;
+    user-select: none;
+    margin:-18px 0px;
+  }
